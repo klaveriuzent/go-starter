@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+	now := time.Now()
+	fmt.Printf("\n%s ⚡️ You are already connected to Golang!\n\n", now.Format("2006-01-02 15:04:05"))
+
 	// Membuat instance router Gin
 	r := gin.Default()
 
@@ -20,7 +23,4 @@ func main() {
 
 	// Menjalankan server HTTP
 	r.Run(":8080")
-
-	now := time.Now()
-	fmt.Printf("\n%s ⚡️ You are already connected to Golang!\n\n", now.Format("2006-01-02 15:04:05"))
 }
